@@ -349,7 +349,7 @@ main .topbar .right-side .icons span {
         position: static;
         justify-content: end;
         margin-top: 3rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
 
  
@@ -424,6 +424,10 @@ main .topbar .right-side .icons span {
 
     /* MAIN */
 
+    main .topbar {
+        margin-top: 1rem;
+    }
+
     main .topbar .menu {
         display: inline;
         cursor: pointer;
@@ -433,7 +437,7 @@ main .topbar .right-side .icons span {
     main {
         position: absolute;
         width: 100%;
-        padding: 2rem 2%;
+        padding: 1rem 2%;
     }
     
 }

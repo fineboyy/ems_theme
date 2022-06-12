@@ -549,6 +549,8 @@ th {
     }
 
     aside .sidebar div:last-child {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
         align-items: start;
     }
 
@@ -557,6 +559,10 @@ th {
     }
 
     /* MAIN */
+
+    main .topbar {
+        margin-top: 1rem;
+    }
 
     main .topbar .menu {
         display: inline;
@@ -567,7 +573,7 @@ th {
     main {
         position: absolute;
         width: 100%;
-        padding: 2rem 2%;
+        padding: 1rem 2%;
     }
 
     main .recent-employees .employees {
@@ -585,6 +591,17 @@ th {
 }
 
 @media screen and (max-width: 425px) {
+
+    /* ASIDE */
+    aside {
+        width: 65%;
+    }
+
+    aside .sidebar {
+        margin-top: 1.5rem;
+        gap: 1rem;
+    }
+
     /* TOPBAR */
     .icons span {
         display: none;
@@ -594,6 +611,14 @@ th {
     
     tr .avatar:nth-child(4) {
         display: none;
+    }
+
+    table {
+        border-spacing: 0.7rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
     }
 }
 
