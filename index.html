@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard | Div.co Employee Management System</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js"></script>
     <!-- MATERIAL ICONS  LINK -->
     <link
       rel="stylesheet"
@@ -17,6 +18,7 @@
       <aside>
         <div class="top">
           <h2>EMS APPLICATION</h2>
+          <span class="material-symbols-sharp" onclick="toggleSidebar()"> close </span>
         </div>
 
         <div class="sidebar">
@@ -39,12 +41,15 @@
           <div>
             <a href="#" class="nav-item">
               <span class="material-symbols-sharp"> help </span>
+              <p>Help</p>
             </a>
             <a href="#" class="nav-item">
               <span class="material-symbols-sharp"> settings </span>
+              <p>Settings</p>
             </a>
             <a href="login.html" class="nav-item">
               <span class="material-symbols-sharp"> logout </span>
+              <p>Logout</p>
             </a>
           </div>
         </div>
@@ -57,7 +62,7 @@
           </div>
 
           <div class="right-side">
-            <div class="menu">
+            <div class="menu" onclick="toggleSidebar()">
               <span class="material-symbols-sharp"> menu </span>
             </div>
             <div class="search">
@@ -123,144 +128,239 @@
                 <th>Department Name</th>
                 <th>Employees</th>
                 <th>Description</th>
-                <th>About</th>
+                <th>More</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Sales Department</td>
-                <td class="image-group-td">
-                  <span class="image-group-span">
-                    <img
+                <td class="avatar-group">
+                    <div class="avatar">
+                        <img
                       src="./images/profile-1.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <img
+                    </div>
+                    <div class="avatar">
+                        <img
                       src="./images/profile-2.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <img
+                    </div>
+                    <div class="avatar">
+                        <img
                       src="./images/profile-3.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <h2 class="profile-photo">
-                        +15
-                    </h2>
-                  </span>
+                    </div>
+                    <div class="avatar">
+                        <img
+                      src="./images/profile-4.jpg"
+                      alt=""
+                    />
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
+                    </div>
+                    <div class="avatar">
+                        <img
+                      src="./images/profile-2.jpg"
+                      alt=""
+                    />
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
+                    </div>
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
                 </td>
                 <td>This is the sales department</td>
-                <td><a href="#">More Details</a></td>
+                <td><a href="#" class="more-details">Details...</a></td>
               </tr>
               <tr>
-                <td>Sales Department</td>
-                <td class="image-group-td">
-                  <span class="image-group-span">
-                    <img
+                <td>Marketing Department</td>
+                <td class="avatar-group">
+                    <div class="avatar">
+                        <img
                       src="./images/profile-1.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <img
+                    </div>
+                    <div class="avatar">
+                        <img
                       src="./images/profile-2.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <img
+                    </div>
+                    <div class="avatar">
+                        <img
                       src="./images/profile-3.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <h2 class="profile-photo">
-                        +15
-                    </h2>
-                  </span>
+                    </div>
+                    <div class="avatar">
+                        <img
+                      src="./images/profile-4.jpg"
+                      alt=""
+                    />
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
+                    </div>
+                    <div class="avatar">
+                        <img
+                      src="./images/profile-2.jpg"
+                      alt=""
+                    />
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
+                    </div>
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
                 </td>
                 <td>This is the sales department</td>
-                <td><a href="#">More Details</a></td>
+                <td><a href="#" class="more-details">Details...</a></td>
               </tr>
               <tr>
-                <td>Sales Department</td>
-                <td class="image-group-td">
-                  <span class="image-group-span">
-                    <img
+                <td>Procurement Department</td>
+                <td class="avatar-group">
+                    <div class="avatar">
+                        <img
                       src="./images/profile-1.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <img
+                    </div>
+                    <div class="avatar">
+                        <img
                       src="./images/profile-2.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <img
+                    </div>
+                    <div class="avatar">
+                        <img
                       src="./images/profile-3.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <h2 class="profile-photo">
-                        +15
-                    </h2>
-                  </span>
+                    </div>
+                    <div class="avatar">
+                        <img
+                      src="./images/profile-4.jpg"
+                      alt=""
+                    />
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
+                    </div>
+                    <div class="avatar">
+                        <img
+                      src="./images/profile-2.jpg"
+                      alt=""
+                    />
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
+                    </div>
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
                 </td>
                 <td>This is the sales department</td>
-                <td><a href="#">More Details</a></td>
+                <td><a href="#" class="more-details">Details...</a></td>
               </tr>
               <tr>
-                <td>Sales Department</td>
-                <td class="image-group-td">
-                  <span class="image-group-span">
-                    <img
+                <td>IT Department</td>
+                <td class="avatar-group">
+                    <div class="avatar">
+                        <img
                       src="./images/profile-1.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <img
+                    </div>
+                    <div class="avatar">
+                        <img
                       src="./images/profile-2.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <img
+                    </div>
+                    <div class="avatar">
+                        <img
                       src="./images/profile-3.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <h2 class="profile-photo">
-                        +15
-                    </h2>
-                  </span>
+                    </div>
+                    <div class="avatar">
+                        <img
+                      src="./images/profile-4.jpg"
+                      alt=""
+                    />
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
+                    </div>
+                    <div class="avatar">
+                        <img
+                      src="./images/profile-2.jpg"
+                      alt=""
+                    />
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
+                    </div>
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
                 </td>
                 <td>This is the sales department</td>
-                <td><a href="#">More Details</a></td>
+                <td><a href="#" class="more-details">Details...</a></td>
               </tr>
               <tr>
-                <td>Sales Department</td>
-                <td class="image-group-td">
-                  <span class="image-group-span">
-                    <img
+                <td>R & D Department</td>
+                <td class="avatar-group">
+                    <div class="avatar">
+                        <img
                       src="./images/profile-1.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <img
+                    </div>
+                    <div class="avatar">
+                        <img
                       src="./images/profile-2.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <img
+                    </div>
+                    <div class="avatar">
+                        <img
                       src="./images/profile-3.jpg"
                       alt=""
-                      class="profile-photo"
                     />
-                    <h2 class="profile-photo">
-                        +15
-                    </h2>
-                  </span>
+                    </div>
+                    <div class="avatar">
+                        <img
+                      src="./images/profile-4.jpg"
+                      alt=""
+                    />
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
+                    </div>
+                    <div class="avatar">
+                        <img
+                      src="./images/profile-2.jpg"
+                      alt=""
+                    />
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
+                    </div>
+                    <div class="hidden-avatars">
+                        +10
+                    </div>
                 </td>
                 <td>This is the sales department</td>
-                <td><a href="#">More Details</a></td>
+                <td><a href="#" class="more-details">Details...</a></td>
               </tr>
              
             </tbody>

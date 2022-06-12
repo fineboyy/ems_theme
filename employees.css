@@ -12,6 +12,8 @@
     --color-nav-background: #0F2D69;
     --padding-1: 1.2rem;
     --color-dark: #4B5968;
+    --color-border-light: #D5DDE5;
+    --avatar-size: 50px;
 
     --color-success: #41f1b6;
     --color-warning: #ffbb55;
@@ -126,12 +128,13 @@ b {
 }
 
 .container {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: relative;
-    inset: 0;
     display: grid;
     grid-template-columns: 19rem auto;
+    overflow: scroll;
+    overflow-x: hidden;
     
 }
 
@@ -142,7 +145,8 @@ b {
 aside {
     height: 100vh;
     background-color: var(--color-primary-variant);
-    position: relative;
+    position: sticky;
+    top: 0;
 }
 
 aside  .top h2 {
@@ -151,6 +155,10 @@ aside  .top h2 {
     font-size: 1.7rem;
     color: var(--color-primary);
     text-align: center;
+}
+
+aside .top span {
+    display: none;
 }
 
 aside .sidebar {
@@ -195,6 +203,10 @@ aside .sidebar div:last-child {
     gap: 1.3rem;
 }
 
+aside .sidebar div:last-child p {
+    display: none;
+}
+
 aside .sidebar div:last-child span {
     transition: all 200ms ease-in-out;
 }
@@ -208,7 +220,6 @@ aside .sidebar div:last-child a:hover span {
 main {
     width: 96%;
     margin: 0 auto;
-    /* background-color: red; */
 }
 
 main .topbar {
@@ -219,12 +230,23 @@ main .topbar {
     padding: 0.7rem 0.7rem 0.7rem 2rem;
     width: 100%;
     background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+main .topbar .menu {
+    display: none;
+}
+
+main .topbar .brand {
+    padding: 0.6rem 3rem;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 40px;
 }
 
 main .topbar .brand h1 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--color-info-dark);
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 main .topbar .right-side {
@@ -263,7 +285,165 @@ main .topbar .right-side .icons span {
 }
 
 
+/* =========== ANIMAION =========== */
+.translate-sidebar {
+    display: fixed;
+    transform: translateX(0);
+}
 
+
+/* =============== MEDIA QUERIES ========== */
+
+
+@media screen and (max-width:1200px) {
+
+    .container {
+        grid-template-columns: 15rem auto;
+    }
+
+    main .topbar {
+        padding: 0.7rem;
+    }
+    
+}
+
+
+@media screen and (max-width:920px) {
+
+    .container {
+        grid-template-columns: 7rem auto;
+    }
+
+    /* SIDEBAR */
+    aside {
+        height: 100%;
+    }
+
+    aside .top h2 {
+        visibility: hidden;
+        justify-content: center;
+    }
+
+    aside .sidebar {
+        margin-left: 0;
+    }
+
+    aside .sidebar a {
+        justify-content: center;
+    }
+
+    aside .sidebar a span {
+        transition: all 300ms ease;
+    }
+
+    aside .sidebar a p {
+        display: none;
+    }
+
+    aside .sidebar a span:hover {
+        font-size: 2rem;
+    }
+
+    aside .sidebar div:last-child {
+        flex-direction: column;
+        position: static;
+        justify-content: end;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+ 
+    /* MAIN */
+    
+    main {
+        width: 94%;
+    }
+
+    main .topbar {
+        padding: 1rem;
+    }
+
+    main .topbar .brand {
+        display: none;
+    }
+
+    main .topbar .right-side {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    /* SIDEBAR */
+    aside {
+        width: 45%;
+        top: 0;
+        z-index: 5;
+        transform: translateX(-120%);
+        transition: all 500ms ease;
+    }
+
+    aside .top span {
+        display: inline;
+        color: var(--color-white);
+        font-size: 2rem;
+        font-weight: bold;
+        position: absolute;
+        top: 2rem;
+        right: 1rem;
+        cursor: pointer;
+
+        transition: all 200ms ease;
+    }
+
+    aside .top span:hover {
+        transform: rotate(90deg);
+    }
+
+    aside .sidebar a {
+        justify-content: start;
+    }
+
+    aside .sidebar a p {
+        display: inline;
+    }
+
+    aside .sidebar div:last-child {
+        align-items: start;
+    }
+
+    aside .sidebar div:last-child p {
+        display: inline;
+    }
+
+    /* MAIN */
+
+    main .topbar .menu {
+        display: inline;
+        cursor: pointer;
+        font-weight: 800;
+    }
+
+    main {
+        position: absolute;
+        width: 100%;
+        padding: 2rem 2%;
+    }
+    
+}
+
+@media screen and (max-width: 425px) {
+    /* TOPBAR */
+    .icons span {
+        display: none;
+    }
+}
 
 
 
