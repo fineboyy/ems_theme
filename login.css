@@ -76,8 +76,6 @@ body {
 .card {
     width: 70%;
     height: 80vh;
-    /* display: grid;
-    grid-template-columns: 65% auto; */
     background-color: white;
     border-radius: var(--card-border-radius);
     overflow: hidden;
@@ -91,13 +89,17 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
-
 }
 
 .card .image-side img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: 5;  
+}
+
+.card .image-overlay {
+    display: none;
 }
 
 .card .login {
@@ -124,6 +126,8 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 form input[type='text'], form input[type='password'] {
@@ -153,4 +157,95 @@ form input[type='submit'] {
     border-radius: 35px;
     font-weight: 700;
     cursor: pointer;
+}
+
+
+
+/* ============== MEDIA QUERIES =================== */
+
+@media screen and (max-width: 1200px) {
+
+    .card .image-side {
+        width: 60%;
+
+    }
+
+    .card .login {
+        width: 50%;
+    }
+    
+}
+
+@media screen and (max-width:920px) {
+
+    .container {
+        background-color: #edeef3;
+    }
+
+    .card {
+        border-radius: 7px;
+    }
+
+    .card .image-side {
+        width: 5%;
+        clip-path: none;
+    }
+
+    .card .image-side img {
+        object-fit: cover;
+    }
+
+    .card .image-side .image-overlay {
+        display: block;
+        position: absolute;
+        inset: 0;   
+        z-index: 1;
+        background-color: var(--color-primary);
+
+    }
+
+    .card .login {
+        width: 95%;
+    }
+
+    form input {
+        text-align: center;
+    }
+    
+}
+
+
+@media screen and (max-width:768px) {
+    body, .container {
+        background-color: #0C2556;
+    }
+
+    body > .image-overlay {
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(rgba(15, 23, 47, 0.65), rgba(15, 23, 47, 0.65)), url("./images/login_bg.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .card {
+        width: 90%;
+        border-radius: 10px;
+    }
+
+    .card .image-side {
+        display: none;
+
+    }
+
+    .card .login {
+        width: 100%;
+    }
+
+
+    form input[type='text'], form input[type='password'] {
+        width: 15rem;
+        text-align: center;
+    }
+    
 }
