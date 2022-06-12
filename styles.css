@@ -12,6 +12,7 @@
     --color-nav-background: #0F2D69;
     --padding-1: 1.2rem;
     --color-dark: #4B5968;
+    --color-border-light: #D5DDE5;
 
     --color-success: #41f1b6;
     --color-warning: #ffbb55;
@@ -219,6 +220,11 @@ main .topbar {
     padding: 0.7rem 0.7rem 0.7rem 2rem;
     width: 100%;
     background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+main .topbar .menu {
+    display: none;
 }
 
 main .topbar .brand {
@@ -317,7 +323,7 @@ main .recent-employees .employees .employee a:hover {
     margin-top: 1rem;
     width: 100%;
     font-size: 1rem;
-    border-spacing: 1rem;
+    border-spacing: 0.5rem 1rem;
 }
 
 td, th {
@@ -326,10 +332,175 @@ td, th {
     text-align: center;
 }
 
+table tbody tr .image-group-td {
+    height: 5rem;
+    padding: 0;
+    position: relative;
+
+}
+
+table tbody tr .image-group-span {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+td .profile-photo {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--color-white);
+    position: absolute;
+    inset: 0;
+    top: 0.5rem;
+    left: 2.5rem;
+    cursor: pointer;
+}
+
+td .profile-photo:nth-child(2) {
+    left: calc(2.5rem + 1.5rem);
+}
+td .profile-photo:nth-child(3) {
+    left: calc(2.5rem + 3.5rem);
+}
+td .profile-photo:nth-child(4) {
+    left: calc(2.5rem + 5.5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    color: var(--color-border-light);
+    border: 1px dashed var(--color-primary);
+
+}
+
+
+
 th {
     font-size: 1.2rem;
 }
 
+/* =============== MEDIA QUERIES ========== */
+
+
+@media screen and (max-width:1200px) {
+
+    .container {
+        grid-template-columns: 15rem auto;
+    }
+
+    main .topbar {
+        padding: 0.7rem;
+    }
+    
+}
+
+
+@media screen and (max-width:920px) {
+
+    main {
+        width: 94%;
+    }
+
+    .container {
+        grid-template-columns: 7rem auto;
+    }
+
+    aside {
+        height: 100%;
+    }
+
+    aside .top h2 {
+        visibility: hidden;
+        justify-content: center;
+    }
+
+    aside .sidebar {
+        margin-left: 0;
+    }
+
+    aside .sidebar a p {
+        display: none;
+    }
+
+    main .recent-employees .employees {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    table thead tr th:nth-child(3) {
+        display: none;
+    }
+    table tbody tr td:nth-child(3) {
+        display: none;
+    }
+
+    aside .sidebar div:last-child {
+        flex-direction: column;
+        position: static;
+        justify-content: end;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    aside .sidebar a {
+        justify-content: center;
+    }
+
+    aside .sidebar a span {
+        transition: all 300ms ease;
+    }
+
+    aside .sidebar a span:hover {
+        font-size: 2rem;
+    }
+
+    main .topbar {
+        padding: 1rem;
+    }
+
+    main .topbar .brand {
+        display: none;
+    }
+
+    main .topbar .right-side {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    aside {
+        display: none;
+    }
+
+    main .topbar .menu {
+        display: inline;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    
+
+    main .recent-employees .employees {
+        grid-template-columns: 1fr;
+    }
+
+    main .recent-employees .employees .employee {
+        box-shadow: var(--box-shadow);
+    }
+    
+}
+
+@media screen and (max-width: 425px) {
+    .icons span:last-child {
+        display: none;
+    }    
+}
 
 
 

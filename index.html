@@ -1,182 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard | Div.co Employee Management System</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css" />
     <!-- MATERIAL ICONS  LINK -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,300,1,0" />
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,300,1,0"
+    />
+  </head>
+  <body>
     <div class="container">
-        <aside>
-            <div class="top">
-                    <h2>EMS APPLICATION</h2>
+      <aside>
+        <div class="top">
+          <h2>EMS APPLICATION</h2>
+        </div>
+
+        <div class="sidebar">
+          <a href="#" class="nav-item active">
+            <span class="material-symbols-sharp"> format_list_bulleted </span>
+            <p>Dashboard</p>
+          </a>
+          <a href="employees.html" class="nav-item">
+            <span class="material-symbols-sharp"> group </span>
+            <p>Employees</p>
+          </a>
+          <a href="departments.html" class="nav-item">
+            <span class="material-symbols-sharp"> domain </span>
+            <p>Departments</p>
+          </a>
+          <a href="#" class="nav-item">
+            <span class="material-symbols-sharp"> add_circle </span>
+            <p>Add</p>
+          </a>
+          <div>
+            <a href="#" class="nav-item">
+              <span class="material-symbols-sharp"> help </span>
+            </a>
+            <a href="#" class="nav-item">
+              <span class="material-symbols-sharp"> settings </span>
+            </a>
+            <a href="login.html" class="nav-item">
+              <span class="material-symbols-sharp"> logout </span>
+            </a>
+          </div>
+        </div>
+      </aside>
+      <!-- END OF ASIDE -->
+      <main>
+        <nav class="topbar">
+          <div class="brand">
+            <h1>Company's Name</h1>
+          </div>
+
+          <div class="right-side">
+            <div class="menu">
+              <span class="material-symbols-sharp"> menu </span>
+            </div>
+            <div class="search">
+              <input type="text" placeholder="Search..." />
+              <span class="material-symbols-sharp"> search </span>
             </div>
 
-            <div class="sidebar">
-                <a href="#" class="nav-item active">
-                    <span class="material-symbols-sharp">
-                        format_list_bulleted
-                        </span>
-                    <p>Dashboard</p>
-                </a>
-                <a href="employees.html" class="nav-item">
-                    <span class="material-symbols-sharp">
-                        group
-                    </span>
-                    <p>Employees</p>
-                </a>
-                <a href="departments.html" class="nav-item">
-                    <span class="material-symbols-sharp">
-                        domain
-                    </span>
-                    <p>Departments</p>
-                </a>
-                <a href="#" class="nav-item">
-                    <span class="material-symbols-sharp">
-                        add_circle
-                    </span>
-                    <p>Add</p>
-                </a>
-                <div>
-                    <a href="#" class="nav-item">
-                        <span class="material-symbols-sharp">
-                            help
-                        </span>
-                    </a>
-                    <a href="#" class="nav-item">
-                        <span class="material-symbols-sharp">
-                            settings
-                        </span>
-                    </a>
-                    <a href="login.html" class="nav-item">
-                        <span class="material-symbols-sharp">
-                            logout
-                        </span>
-                    </a>
-                </div>
+            <div class="icons">
+              <span class="material-symbols-sharp"> notifications </span>
+              <span class="material-symbols-sharp"> person </span>
             </div>
-        </aside>
-        <!-- END OF ASIDE -->
-        <main>
+          </div>
+        </nav>
+        <!-- END OF HEADER -->
 
-            <nav class="topbar">
-                <div class="brand">
-                    <h1>Company's Name</h1>
-                </div>
+        <div class="recent-employees">
+          <h2>Recently Viewed Employees</h2>
 
-                <div class="right-side">
-                    <div class="search">
-                        <input type="text" placeholder="Search...">
-                        <span class="material-symbols-sharp">
-                            search
-                        </span>
-                    </div>
-    
-                    <div class="icons">
-                        <span class="material-symbols-sharp">
-                            notifications
-                        </span>
-                        <span class="material-symbols-sharp">
-                            person
-                        </span>
-                    </div>
-
-                </div>
-
-
-            </nav>
-            <!-- END OF HEADER -->
-
-            <div class="recent-employees">
-                <h2>Recently Viewed Employees</h2>
-
-                <div class="employees">
-                    <div class="employee">
-                        <div class="profile-photo">
-                            <img src="./images/profile-1.jpg" alt="">
-                        </div>
-                        <h2>Jane Cooper</h2>
-                        <p>Sales Officer</p>
-                        <a href="#">View Details</a>
-                    </div>
-                    <div class="employee">
-                        <div class="profile-photo">
-                            <img src="./images/profile-2.jpg" alt="">
-                        </div>
-                        <h2>Coby James</h2>
-                        <p>Chief Accountant</p>
-                        <a href="#">View Details</a>
-                    </div>
-                    <div class="employee">
-                        <div class="profile-photo">
-                            <img src="./images/profile-3.jpg" alt="">
-                        </div>
-                        <h2>Derrick Jones</h2>
-                        <p>Operations Manager</p>
-                        <a href="#">View Details</a>
-                    </div>
-                    <div class="employee">
-                        <div class="profile-photo">
-                            <img src="./images/profile-4.jpg" alt="">
-                        </div>
-                        <h2>Ama Diane</h2>
-                        <p>Treasurer</p>
-                        <a href="#">View Details</a>
-                    </div>
-                </div>
+          <div class="employees">
+            <div class="employee">
+              <div class="profile-photo">
+                <img src="./images/profile-1.jpg" alt="" />
+              </div>
+              <h2>Jane Cooper</h2>
+              <p>Sales Officer</p>
+              <a href="#">View Details</a>
             </div>
-
-            <!-- END OF RECENT EMPLOYEES -->
-
-            <div class="departments">
-                <h2>Departments</h2>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Department Name</th>
-                            <th>Employees</th>
-                            <th>Description</th>
-                            <th>About</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Sales Department</td>
-                            <td>Some Images</td>
-                            <td>This is the sales department</td>
-                            <td><a href="#">More Details</a></td>
-                        </tr>
-                        <tr>
-                            <td>Sales Department</td>
-                            <td>Some Images</td>
-                            <td>This is the sales department</td>
-                            <td><a href="#">More Details</a></td>
-                        </tr>
-                        <tr>
-                            <td>Sales Department</td>
-                            <td>Some Images</td>
-                            <td>This is the sales department</td>
-                            <td><a href="#">More Details</a></td>
-                        </tr>
-                        <tr>
-                            <td>Sales Department</td>
-                            <td>Some Images</td>
-                            <td>This is the sales department</td>
-                            <td><a href="#">More Details</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="employee">
+              <div class="profile-photo">
+                <img src="./images/profile-2.jpg" alt="" />
+              </div>
+              <h2>Coby James</h2>
+              <p>Chief Accountant</p>
+              <a href="#">View Details</a>
             </div>
+            <div class="employee">
+              <div class="profile-photo">
+                <img src="./images/profile-3.jpg" alt="" />
+              </div>
+              <h2>Derrick Jones</h2>
+              <p>Operations Manager</p>
+              <a href="#">View Details</a>
+            </div>
+            <div class="employee">
+              <div class="profile-photo">
+                <img src="./images/profile-4.jpg" alt="" />
+              </div>
+              <h2>Ama Diane</h2>
+              <p>Treasurer</p>
+              <a href="#">View Details</a>
+            </div>
+          </div>
+        </div>
 
-        </main>
+        <!-- END OF RECENT EMPLOYEES -->
+
+        <div class="departments">
+          <h2>Departments</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Department Name</th>
+                <th>Employees</th>
+                <th>Description</th>
+                <th>About</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sales Department</td>
+                <td class="image-group-td">
+                  <span class="image-group-span">
+                    <img
+                      src="./images/profile-1.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <img
+                      src="./images/profile-2.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <img
+                      src="./images/profile-3.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <h2 class="profile-photo">
+                        +15
+                    </h2>
+                  </span>
+                </td>
+                <td>This is the sales department</td>
+                <td><a href="#">More Details</a></td>
+              </tr>
+              <tr>
+                <td>Sales Department</td>
+                <td class="image-group-td">
+                  <span class="image-group-span">
+                    <img
+                      src="./images/profile-1.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <img
+                      src="./images/profile-2.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <img
+                      src="./images/profile-3.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <h2 class="profile-photo">
+                        +15
+                    </h2>
+                  </span>
+                </td>
+                <td>This is the sales department</td>
+                <td><a href="#">More Details</a></td>
+              </tr>
+              <tr>
+                <td>Sales Department</td>
+                <td class="image-group-td">
+                  <span class="image-group-span">
+                    <img
+                      src="./images/profile-1.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <img
+                      src="./images/profile-2.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <img
+                      src="./images/profile-3.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <h2 class="profile-photo">
+                        +15
+                    </h2>
+                  </span>
+                </td>
+                <td>This is the sales department</td>
+                <td><a href="#">More Details</a></td>
+              </tr>
+              <tr>
+                <td>Sales Department</td>
+                <td class="image-group-td">
+                  <span class="image-group-span">
+                    <img
+                      src="./images/profile-1.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <img
+                      src="./images/profile-2.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <img
+                      src="./images/profile-3.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <h2 class="profile-photo">
+                        +15
+                    </h2>
+                  </span>
+                </td>
+                <td>This is the sales department</td>
+                <td><a href="#">More Details</a></td>
+              </tr>
+              <tr>
+                <td>Sales Department</td>
+                <td class="image-group-td">
+                  <span class="image-group-span">
+                    <img
+                      src="./images/profile-1.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <img
+                      src="./images/profile-2.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <img
+                      src="./images/profile-3.jpg"
+                      alt=""
+                      class="profile-photo"
+                    />
+                    <h2 class="profile-photo">
+                        +15
+                    </h2>
+                  </span>
+                </td>
+                <td>This is the sales department</td>
+                <td><a href="#">More Details</a></td>
+              </tr>
+             
+            </tbody>
+          </table>
+        </div>
+      </main>
     </div>
-
-    
-</body>
+  </body>
 </html>
